@@ -53,7 +53,7 @@ int TBitField::GetBit(const int n) const // получить значение б
 
 TBitField& TBitField::operator=(const TBitField &bf) // присваивание
 {
-	return TBitField(1);
+	return *this;
 }
 
 int TBitField::operator==(const TBitField &bf) const // сравнение
