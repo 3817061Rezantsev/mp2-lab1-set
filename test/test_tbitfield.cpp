@@ -1,7 +1,11 @@
 #include "tbitfield.h"
 
 #include <gtest.h>
-
+TEST(TSet, odin_ravno_odin)
+{
+	const int a = 1;
+	EXPECT_EQ(1,a);
+}
 TEST(TBitField, can_create_bitfield_with_positive_length)
 {
   ASSERT_NO_THROW(TBitField bf(3));
