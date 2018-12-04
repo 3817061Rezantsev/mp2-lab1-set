@@ -170,9 +170,8 @@ istream &operator>>(istream &istr, TBitField &bf) // ввод
 {
 	int i = 0;
 	char ch;
-	do { istr >> ch; } while (ch != ' ');
 
-	while (1)
+	while (i<bf.bitLen)
 	{
 		istr >> ch;
 		if (ch == '0')

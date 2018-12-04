@@ -107,12 +107,13 @@ istream &operator>>(istream &istr, TSet &s) // ввод
 {
 	int tmp;
 	char ch;
-	do { istr >> ch; } while (ch != '{');
-	do {
+	int i = 0;
+	while (i<s.maxPower)
+	{
 		istr >> tmp;
 		s.InsElem(tmp);
-		do { istr >> ch; } while ((ch != ',') && (ch != '}'));
-	} while (ch != '}');
+		i++;
+	}
 	return istr;
 }
 // ---------------------------------------------------------------------------
